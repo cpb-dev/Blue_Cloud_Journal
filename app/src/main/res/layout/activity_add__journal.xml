@@ -7,4 +7,59 @@
     android:background="@drawable/app_background"
     tools:context=".Add_Journal">
 
+    <!--TODO: Make the date section show current date -->
+    <!--TODO: Add icons for the mood rating (you can only choose 1) -->
+
+    <TextView
+        android:id="@+id/nj_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:shadowColor="#333333"
+        android:shadowDx="0"
+        android:shadowDy="5"
+        android:shadowRadius="10"
+        android:text="@string/aj_title"
+        android:textColor="@color/colorText"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:text="DATE"
+        android:textSize="12sp"
+        android:textColor="@color/colorText"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nj_title"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/mood_card"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/content_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nj_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:text="@string/mood_title"/>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
