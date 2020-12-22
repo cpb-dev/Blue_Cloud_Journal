@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Blue Cloud Journal</string>
 
+    <!-- Menu Items -->
+    <string name="m_home">Home Page</string>
+    <string name="m_journal">Journals Page</string>
+    <string name="m_goals">Goals Page</string>
+    <string name="m_settings">Settings Page</string>
+
     <!-- Add Journal Page -->
     <string name="aj_title">New Journal</string>
     <string name="mood_title">How was your day?</string>

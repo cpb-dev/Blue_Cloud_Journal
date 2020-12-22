@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    tools:context=".Add_Journal">
+    tools:context=".AddJournal">
 
     <!--TODO: Make the date section show current date -->
     <!--TODO: Add icons for the mood rating (you can only choose 1) -->
