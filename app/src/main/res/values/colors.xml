@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#49738F</color>
     <color name="colorSecondary">#A3CEF1</color>
     <color name="colorText">#000000</color>
+    <color name="colorTextShadow">#333333</color>
+    <color name="colorBtn">#C44536</color>
 </resources>
