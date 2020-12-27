@@ -25,7 +25,7 @@ public class Home extends Fragment {
             }
         });
 
-        return v; //Returning the fragment view
+        return v; //Returning the fragment view to be displayed on the screen
     }
 
     public void addNewJournal(){

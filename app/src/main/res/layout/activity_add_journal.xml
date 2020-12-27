@@ -7,8 +7,8 @@
     android:background="@drawable/app_background"
     tools:context=".AddJournal">
 
-    <!--TODO: Make the date section show current date -->
-    <!--TODO: Add icons for the mood rating (you can only choose 1) -->
+    <!-- TODO: Make a layout view for activities with button to add -->
+    <!-- TODO: Make a view for the added activities(only if any added) -->
 
     <TextView
         android:id="@+id/nj_title"
@@ -43,7 +43,7 @@
     <LinearLayout
         android:id="@+id/mood_card"
         android:layout_width="350dp"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         android:background="@drawable/content_background"
@@ -60,6 +60,51 @@
             android:textColor="@color/colorText"
             android:textStyle="bold"
             android:text="@string/mood_title"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_sbeam"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/ic_smile_beam" />
+
+            <Button
+                android:id="@+id/btn_smile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_smile" />
+
+            <Button
+                android:id="@+id/btn_neutral"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_neutral" />
+
+            <Button
+                android:id="@+id/btn_sad"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_sad" />
+
+            <Button
+                android:id="@+id/btn_cry"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_sad_cry" />
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

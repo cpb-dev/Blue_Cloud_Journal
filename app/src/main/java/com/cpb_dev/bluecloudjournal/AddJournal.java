@@ -16,6 +16,11 @@ import java.util.Locale;
 
 public class AddJournal extends Fragment {
 
+    //TODO: Make rating system, so the emoji buttons provide a rating output
+    //TODO: Make a list of basic activities for the user to choose from
+    //TODO: Include a method for users to add activities of their own
+    //TODO: Make the view for the activities added to be invisible until an activity is inputted
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -26,6 +31,6 @@ public class AddJournal extends Fragment {
         TextView date = (TextView) v.findViewById(R.id.date);
         date.setText(cDate);
 
-        return v;
+        return v; //Returning the fragment
     }
 }
