@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/app_background"
+    android:background="@drawable/background_app"
     tools:context=".AddJournal">
 
-    <!-- TODO: Make a new form for activities with a button to add -->
-    <!-- TODO: Make a recycler view for the added activities(only if any added) -->
+    <!--
+    TODO: Make a new form for activities with a button to add
+    TODO: Make a recycler view for the added activities(only if any added)
+    -->
 
     <TextView
         android:id="@+id/nj_title"
@@ -45,7 +47,7 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/content_background"
+        android:background="@drawable/background_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +126,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:background="@drawable/content_background"
+        android:background="@drawable/background_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mood_card">

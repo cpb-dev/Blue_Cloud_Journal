@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -17,8 +16,13 @@ import java.util.Locale;
 
 /*
 TODO: Make rating system, so the emoji buttons provide a rating output
-TODO: Make a list of basic activities for the user to choose from
+
+TODO: Make a list of basic activities for the user to choose from (SQLite Database)
+
 TODO: Include a method for users to add activities of their own
+Do this through having a pop up whereby the user can add an activity to their day.
+A spinner will be on the pop up with a list of already made activities, which the user can add to.
+
 TODO: Make the view for the activities added to be invisible until an activity is inputted
  */
 

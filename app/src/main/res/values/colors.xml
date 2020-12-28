@@ -6,4 +6,5 @@
     <color name="colorText">#000000</color>
     <color name="colorTextShadow">#333333</color>
     <color name="colorBtn">#C44536</color>
+    <color name="colorFillInput">#7895AD</color>
 </resources>

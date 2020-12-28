@@ -8,7 +8,7 @@
     <string name="m_settings">Settings Page</string>
 
     <!-- Home Page -->
-    <string name="hp_title">User\'s Name</string>
+    <string name="hp_title">Blue Cloud Journal</string>
     <string name="aj_btn">Add New Journal</string>
 
     <!-- Add Journal Page -->
@@ -18,7 +18,11 @@
     <string name="btn_new_activity">New Activity</string>
     <string name="popup_add_activity">Add Activity</string>
 
+    <!-- Journals Page -->
+    <string name="jp_title">Journals</string>
+    <string name="jp_sel_date">Select Date</string>
+
     <!-- Goals Page -->
-    <string name="gp_title">User\'s Goals</string>
+    <string name="gp_title">Goals</string>
     <string name="add_goal_btn">Add New Goal</string>
 </resources>
