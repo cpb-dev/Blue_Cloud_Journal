@@ -7,8 +7,8 @@
     android:background="@drawable/app_background"
     tools:context=".AddJournal">
 
-    <!-- TODO: Make a layout view for activities with button to add -->
-    <!-- TODO: Make a view for the added activities(only if any added) -->
+    <!-- TODO: Make a new form for activities with a button to add -->
+    <!-- TODO: Make a recycler view for the added activities(only if any added) -->
 
     <TextView
         android:id="@+id/nj_title"
@@ -21,7 +21,7 @@
         android:shadowRadius="10"
         android:text="@string/aj_title"
         android:textColor="@color/colorText"
-        android:textSize="24sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,8 +45,8 @@
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="vertical"
         android:background="@drawable/content_background"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nj_title">
@@ -54,62 +54,95 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="@string/mood_title"
             android:textColor="@color/colorText"
-            android:textStyle="bold"
-            android:text="@string/mood_title"/>
+            android:shadowColor="@color/colorTextShadow"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/rg_mood"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:padding="10dp">
+        <RadioGroup
+            android:id="@+id/rg_mood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-                <RadioButton
-                    android:id="@+id/rbtn_sbeam"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/rb_smile_beam_selector" />
+            <RadioButton
+                android:id="@+id/rbtn_sbeam"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/rb_smile_beam_selector"
+                android:button="@android:color/transparent" />
 
-                <RadioButton
-                    android:id="@+id/rbtn_smile"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="15dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/rb_smile_selector" />
+            <RadioButton
+                android:id="@+id/rbtn_smile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/rb_smile_selector"
+                android:button="@android:color/transparent" />
 
-                <RadioButton
-                    android:id="@+id/rbtn_neutral"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="15dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/rb_neutral_selector" />
+            <RadioButton
+                android:id="@+id/rbtn_neutral"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/rb_neutral_selector"
+                android:button="@android:color/transparent" />
 
-                <RadioButton
-                    android:id="@+id/rbtn_sad"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="15dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/rb_sad_selector" />
+            <RadioButton
+                android:id="@+id/rbtn_sad"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/rb_sad_selector"
+                android:button="@android:color/transparent" />
 
-                <RadioButton
-                    android:id="@+id/rbtn_cry"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="15dp"
-                    android:button="@android:color/transparent"
-                    android:background="@drawable/rb_sad_cry_selector" />
-            </RadioGroup>
+            <RadioButton
+                android:id="@+id/rbtn_cry"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/rb_sad_cry_selector"
+                android:button="@android:color/transparent" />
+        </RadioGroup>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/content_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mood_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/activities_title"
+            android:textColor="@color/colorText"
+            android:shadowColor="@color/colorTextShadow"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
