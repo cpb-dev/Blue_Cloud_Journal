@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -23,16 +24,22 @@ TODO: Make the view for the activities added to be invisible until an activity i
 
 public class AddJournal extends Fragment {
 
+    String cDate;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //Fragment inflater
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.activity_add_journal, null);
 
-        String cDate = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+        /* Making the date TextView display the current date */
+        cDate = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
         TextView date = (TextView) v.findViewById(R.id.date);
         date.setText(cDate);
 
+        /* Generating the buttons and their functions */
+
         return v; //Returning the fragment
     }
+
 }
