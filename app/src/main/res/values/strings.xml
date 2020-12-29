@@ -7,15 +7,20 @@
     <string name="m_goals">Goals Page</string>
     <string name="m_settings">Settings Page</string>
 
+    <!-- Buttons -->
+    <string name="btn_aj">Add New Journal</string>
+    <string name="btn_new_activity">New Activity</string>
+    <string name="btn_add_goal">Add New Goal</string>
+
     <!-- Home Page -->
     <string name="hp_title">Blue Cloud Journal</string>
-    <string name="aj_btn">Add New Journal</string>
 
     <!-- Add Journal Page -->
     <string name="aj_title">New Journal</string>
-    <string name="mood_title">How was your day?</string>
-    <string name="activities_title">Activities:</string>
-    <string name="btn_new_activity">New Activity</string>
+    <string name="aj_mood_title">How was your day?</string>
+    <string name="aj_activities_title">Activities:</string>
+
+    <!-- Add Activity Popup -->
     <string name="popup_add_activity">Add Activity</string>
 
     <!-- Journals Page -->
@@ -24,5 +29,4 @@
 
     <!-- Goals Page -->
     <string name="gp_title">Goals</string>
-    <string name="add_goal_btn">Add New Goal</string>
 </resources>
