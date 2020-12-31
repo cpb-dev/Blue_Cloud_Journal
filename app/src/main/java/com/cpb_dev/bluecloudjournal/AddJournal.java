@@ -36,16 +36,11 @@ public class AddJournal extends Fragment {
 
     String cDate;
 
-    Spinner activitySpinner; //DELETE
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //Fragment inflater
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.activity_add_journal, null);
-
-        activitySpinner = v.findViewById(R.id.activitySpinner); //DELETE
-        loadSpinnerData(); //DELETE
 
         /* Making the date TextView display the current date */
         cDate = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
@@ -55,22 +50,6 @@ public class AddJournal extends Fragment {
         /* Generating the buttons and their functions */
 
         return v; //Returning the fragment
-    }
-
-    /* REFERENCE BEFORE DELETING */
-    private void loadSpinnerData(){
-        DbActivities db = new DbActivities(getContext());
-        List<String> activities = db.getActivitiesSpinner();
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getActivity().getBaseContext(), android.R.layout.simple_spinner_item, activities);
-
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        activitySpinner.setAdapter(arrayAdapter);
-    }
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
-        String activity = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), "You've selected " + activity, Toast.LENGTH_LONG).show();
     }
 
 }
