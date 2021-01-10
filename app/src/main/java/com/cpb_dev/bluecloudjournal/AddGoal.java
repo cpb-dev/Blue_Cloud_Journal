@@ -10,17 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/*
-TODO: Add a toggle button for notifications
-TODO: Add an option for notification frequency
-TODO: Add a method to send the user a notification reminder for creating a new journal entry
- */
-
-public class SettingsPage extends Fragment {
+public class AddGoal extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_settings_page, container, false);
+        return inflater.inflate(R.layout.activity_add_goal, container, false);
+
     }
 }

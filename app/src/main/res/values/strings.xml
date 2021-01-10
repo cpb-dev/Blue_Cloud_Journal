@@ -11,6 +11,8 @@
     <string name="btn_aj">Add New Journal</string>
     <string name="btn_new_activity">New Activity</string>
     <string name="btn_add_goal">Add New Goal</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_delete">Delete</string>
 
     <!-- Home Page -->
     <string name="hp_title">Blue Cloud Journal</string>
@@ -21,7 +23,13 @@
     <string name="aj_activities_title">Activities:</string>
     <string name="aj_wwwell_title">What Went Well?</string>
     <string name="aj_wwwrong_title">What Went Wrong?</string>
-    <string name="aj_suggest">Put your text here…</string>
+
+    <string name="txt_suggest">Put your text here…</string>
+
+    <!-- Add Goals Page -->
+    <string name="ag_title">New Goal</string>
+    <string name="ag_goal_title">Goal Title:</string>
+    <string name="ag_goal_desc">Goal Description</string>
 
     <!-- Add Activity Popup -->
     <string name="popup_add_activity">Add Activity</string>

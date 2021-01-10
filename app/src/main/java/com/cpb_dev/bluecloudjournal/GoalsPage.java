@@ -39,6 +39,6 @@ public class GoalsPage extends Fragment {
 
     public void addNewGoal() {
         //Opening the new goal fragment in place of current fragment
-        Toast.makeText(getActivity(), "Unavailable till page is created!", Toast.LENGTH_LONG).show();
+        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new AddGoal()).commit();
     }
 }

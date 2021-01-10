@@ -8,8 +8,8 @@
     tools:context=".AddJournal">
 
     <!--
-    TODO: Make a new form for activities with a button to add
-    TODO: Make a recycler view for the added activities(only if any added)
+    Discarded: Make a new form for activities with a button to add
+    Discarded: Make a recycler view for the added activities(only if any added)
     -->
 
     <TextView
@@ -60,10 +60,6 @@
             android:layout_marginTop="10dp"
             android:text="@string/aj_mood_title"
             android:textColor="@color/colorText"
-            android:shadowColor="@color/colorTextShadow"
-            android:shadowDx="0"
-            android:shadowDy="5"
-            android:shadowRadius="10"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -139,10 +135,6 @@
             android:layout_marginTop="10dp"
             android:text="@string/aj_wwwell_title"
             android:textColor="@color/colorText"
-            android:shadowColor="@color/colorTextShadow"
-            android:shadowDx="0"
-            android:shadowDy="5"
-            android:shadowRadius="10"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -153,7 +145,7 @@
             android:layout_margin="10dp"
             android:padding="5dp"
             android:textSize="16sp"
-            android:hint="@string/aj_suggest"
+            android:hint="@string/txt_suggest"
             />
         
     </LinearLayout>
@@ -176,10 +168,6 @@
             android:layout_marginTop="10dp"
             android:text="@string/aj_wwwrong_title"
             android:textColor="@color/colorText"
-            android:shadowColor="@color/colorTextShadow"
-            android:shadowDx="0"
-            android:shadowDy="5"
-            android:shadowRadius="10"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -190,9 +178,35 @@
             android:layout_margin="10dp"
             android:padding="5dp"
             android:textSize="16sp"
-            android:hint="@string/aj_suggest"
+            android:hint="@string/txt_suggest"
             />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_aj_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_button"
+        android:text="@string/btn_save"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/wwwrong_card" />
+
+    <Button
+        android:id="@+id/btn_aj_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_button"
+        android:text="@string/btn_delete"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_aj_save" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
