@@ -122,6 +122,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/wwwell_card"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -136,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:text="@string/aj_activities_title"
+            android:text="@string/aj_wwwell_title"
             android:textColor="@color/colorText"
             android:shadowColor="@color/colorTextShadow"
             android:shadowDx="0"
@@ -144,7 +145,54 @@
             android:shadowRadius="10"
             android:textSize="24sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_wwwell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:hint="@string/aj_suggest"
+            />
         
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wwwrong_card"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wwwell_card">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/aj_wwwrong_title"
+            android:textColor="@color/colorText"
+            android:shadowColor="@color/colorTextShadow"
+            android:shadowDx="0"
+            android:shadowDy="5"
+            android:shadowRadius="10"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_wwwrong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:textSize="16sp"
+            android:hint="@string/aj_suggest"
+            />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

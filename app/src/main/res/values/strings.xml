@@ -19,6 +19,9 @@
     <string name="aj_title">New Journal</string>
     <string name="aj_mood_title">How was your day?</string>
     <string name="aj_activities_title">Activities:</string>
+    <string name="aj_wwwell_title">What Went Well?</string>
+    <string name="aj_wwwrong_title">What Went Wrong?</string>
+    <string name="aj_suggest">Put your text here…</string>
 
     <!-- Add Activity Popup -->
     <string name="popup_add_activity">Add Activity</string>
