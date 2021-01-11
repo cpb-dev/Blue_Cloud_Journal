@@ -21,6 +21,8 @@ public class SettingsPage extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_settings_page, container, false);
+        View v = LayoutInflater.from(getActivity()).inflate(R.layout.activity_settings_page, null);
+
+        return v;
     }
 }

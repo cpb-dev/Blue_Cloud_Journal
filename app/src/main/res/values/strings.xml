@@ -30,6 +30,8 @@
     <string name="ag_title">New Goal</string>
     <string name="ag_goal_title">Goal Title:</string>
     <string name="ag_goal_desc">Goal Description</string>
+    <string name="ag_goal_prog">Current Progress</string>
+    <string name="ag_prog_current">0%</string>
 
     <!-- Add Activity Popup -->
     <string name="popup_add_activity">Add Activity</string>
