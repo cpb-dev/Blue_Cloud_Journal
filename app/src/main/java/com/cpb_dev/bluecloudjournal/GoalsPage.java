@@ -13,8 +13,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 /*
-TODO: Add a default message for when there are no goals(when app is first installed
-TODO: Use the addNewGoal() function to direct the user to a new fragment
+TODO: Add a default message for when there are no goals(when app is first installed)
+TODO: Add a view for displaying the user's goals, gathered from the goals database
+TODO: Add a method of deleting the goals from the database if requested
+
+Done: Use the addNewGoal() function to direct the user to a new fragment
  */
 
 public class GoalsPage extends Fragment {
