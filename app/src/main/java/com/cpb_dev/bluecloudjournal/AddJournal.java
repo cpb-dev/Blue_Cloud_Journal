@@ -4,7 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,9 +85,34 @@ public class AddJournal extends Fragment {
                 }
             }
         });
+
         btnDelete = (Button)v.findViewById(R.id.btn_aj_delete);
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                deleteJournal();
+            }
+        });
 
         return v; //Returning the fragment
+    }
+
+    public void deleteJournal(){
+        AlertDialog.Builder deleteDialog = new AlertDialog.Builder(getContext());
+        deleteDialog.setTitle("Delete Journal");
+        deleteDialog.setMessage("Are you sure you want to delete?");
+        deleteDialog.setCancelable(true);
+
+        deleteDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getContext(), "Deleted Journal!", Toast.LENGTH_LONG).show();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new JournalsPage()).commit();
+            }
+        });
+        deleteDialog.setNegativeButton("No", null);
+
+        deleteDialog.show();
     }
 
 }
