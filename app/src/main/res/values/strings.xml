@@ -42,4 +42,14 @@
 
     <!-- Goals Page -->
     <string name="gp_title">Goals</string>
+
+    <!-- Start-up Page / App instructions -->
+    <string name="inst_title">Empty Journal!</string>
+    <string name="inst_content">
+        To get started with using your Blue Cloud Journal try the following:
+    </string>
+    <string name="inst_journal">1. Create a journal entry</string>
+    <string name="inst_goal">2. Create a goal for yourself</string>
+    <string name="inst_end">Hope you enjoy your journal experience!</string>
+
 </resources>

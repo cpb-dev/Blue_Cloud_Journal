@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DbActivities extends SQLiteOpenHelper {
+public class dbActivities extends SQLiteOpenHelper {
 
     /* Setting up the Database */
     public static final String DB_NAME = "activities.db";
@@ -20,7 +20,7 @@ public class DbActivities extends SQLiteOpenHelper {
     public static final String COL1 = "ID"; //Table data
     public static final String COL2 = "ActivityName";
 
-    public DbActivities(@Nullable Context context) {
+    public dbActivities(@Nullable Context context) {
         super(context, DB_NAME, null, 1);
     }
 

@@ -37,4 +37,78 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <!-- Start-up Instructions -->
+    <LinearLayout
+        android:id="@+id/inst_card"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/background_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_new_goal">
+        <TextView
+            android:id="@+id/inst_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/inst_title"
+            android:textColor="@color/colorText"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:text="@string/inst_content"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:text="@string/inst_journal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorText"
+            android:textSize="18sp"
+            android:text="@string/inst_goal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:text="@string/inst_end"/>
+    </LinearLayout>
+
+    <!-- RecyclerView to be OFFICIALLY added soon -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_new_goal"
+        android:visibility="gone"
+        tools:listitem="@layout/list_goal"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
