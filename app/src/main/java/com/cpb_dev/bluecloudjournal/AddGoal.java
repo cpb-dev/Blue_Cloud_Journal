@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.DialogInterface;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -83,9 +84,9 @@ public class AddGoal extends Fragment {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String gTitle = etGoalTitle.toString();
-                String gDesc = etGoalDesc.toString();
-                String gProg = progressTV.toString();
+                String gTitle = etGoalTitle.getText().toString();
+                String gDesc = etGoalDesc.getText().toString();
+                String gProg = progressTV.getText().toString();
 
                 if(gTitle.length() != 0 && gDesc.length() != 0) {
                     addGoal(gTitle, cDate, gDesc, gProg);
