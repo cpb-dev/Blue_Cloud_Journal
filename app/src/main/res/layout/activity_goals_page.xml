@@ -48,7 +48,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add_new_goal">
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_new_goal" >
         <TextView
             android:id="@+id/inst_title"
             android:layout_width="wrap_content"
@@ -102,13 +102,13 @@
 
     <!-- RecyclerView to be OFFICIALLY added soon -->
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_goals"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_height="550dp"
+        android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_add_new_goal"
-        android:visibility="gone"
-        tools:listitem="@layout/list_goal"/>
+        android:visibility="gone"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,9 +60,14 @@ public class dbGoals extends SQLiteOpenHelper {
 
     public Cursor getGoals(){
         /* Method to retrieve all goals from database */
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        return data;
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = null;
+        if(db != null){ //Makes sure there is dat within the database
+            c = db.rawQuery(query, null);
+        }
+        return c; //Returns the query
     }
 
     public void deleteGoal(String id) {
