@@ -119,6 +119,7 @@ public class AddGoal extends Fragment {
     }
 
     public void addGoal(String title, String date, String desc, String prog) {
+        /* Used to add all the user inputted data to the database created in dbGoals.java */
         boolean insertGoalData = GoalsDatabase.addGoal(title, date, desc, prog);
 
         if(insertGoalData) {

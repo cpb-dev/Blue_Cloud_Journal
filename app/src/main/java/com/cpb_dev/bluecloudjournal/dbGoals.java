@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -76,6 +77,17 @@ public class dbGoals extends SQLiteOpenHelper {
         String query = "DELETE FROM " + TABLE_NAME + " WHERE " + COL1 +
                 " = " + id;
         db.execSQL(query);
+    }
+
+    public void updateGoals(String row_id, String title, String date, String desc, String prog){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COL2, title);
+        cv.put(COL3, date);
+        cv.put(COL4, desc);
+        cv.put(COL5, prog);
+
+        long result = db.update(TABLE_NAME, cv, "id=?", new String[]{row_id});
     }
 
 }

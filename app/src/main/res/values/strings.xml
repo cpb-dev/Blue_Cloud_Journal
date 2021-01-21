@@ -28,6 +28,7 @@
 
     <!-- Add Goals Page -->
     <string name="ag_title">New Goal</string>
+    <string name="amendg_title">Amend Goal</string>
     <string name="ag_goal_title">Goal Title:</string>
     <string name="ag_goal_desc">Goal Description</string>
     <string name="ag_goal_prog">Current Progress</string>
