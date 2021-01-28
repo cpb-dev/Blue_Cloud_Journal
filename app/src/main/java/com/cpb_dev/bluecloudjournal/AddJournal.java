@@ -45,7 +45,10 @@ Discarded: Make the view for the activities added to be invisible until an activ
 
 public class AddJournal extends Fragment {
 
-    String cDate;
+    dbJournals JournalsDatabase;
+
+    String cDate, jMood, jWell, jWrong;
+    TextView jWellTV, jWrongTV;
     Button btnSave, btnDelete;
     RadioButton rbHappyBeam, rbHappy, rbNeutral, rbSad, rbSadCry;
     RadioGroup rgMood;
@@ -55,6 +58,11 @@ public class AddJournal extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //Fragment inflater
         final View v = LayoutInflater.from(getActivity()).inflate(R.layout.activity_add_journal, null);
+
+        JournalsDatabase = new dbJournals(getContext());
+
+        jWellTV = (TextView) v.findViewById(R.id.et_wwwell);
+        jWrongTV = (TextView) v.findViewById(R.id.et_wwwrong);
 
         /* Making the date TextView display the current date */
         cDate = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
@@ -74,14 +82,32 @@ public class AddJournal extends Fragment {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                jWell = jWellTV.getText().toString();
+                jWrong = jWrongTV.getText().toString();
+
+                /* If statement to determine the mood the user has selected */
                 if(rgMood.getCheckedRadioButtonId()==-1){
                     Toast.makeText(getContext(), "Please select a mood!", Toast.LENGTH_LONG).show();
                 } else {
                     if(rbHappyBeam.isChecked()){
-                        Toast.makeText(getContext(), "Happy Beam is selected", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(getContext(), "Other is selected", Toast.LENGTH_LONG).show();
+                        jMood = "Beam";
+                    } else if(rbHappy.isChecked()) {
+                        jMood = "Happy";
+                    } else if(rbNeutral.isChecked()) {
+                        jMood = "Neutral";
+                    } else if(rbSad.isChecked()) {
+                        jMood = "Sad";
+                    } else { //The only one left available is Sad Cry
+                        jMood = "Cry";
                     }
+                }
+
+                /* If statements for validation with fields */
+                if(jWell.length() != 0 && jWrong.length() != 0){
+                    addJournalData(cDate, jMood, jWell, jWrong);
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new JournalsPage()).commit();
+                } else {
+                    Toast.makeText(getContext(), "Please Fill ALL Fields!", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -95,6 +121,16 @@ public class AddJournal extends Fragment {
         });
 
         return v; //Returning the fragment
+    }
+
+    public void addJournalData(String date, String Mood, String WWWell, String WWWrong){
+        boolean insertJournalData = JournalsDatabase.addJournal(date, Mood, WWWell, WWWrong);
+
+        if(insertJournalData) {
+            Toast.makeText(getContext(), "Journal Added!", Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getContext(), "Something went wrong!", Toast.LENGTH_LONG).show();
+        }
     }
 
     public void deleteJournal(){

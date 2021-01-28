@@ -90,6 +90,7 @@ public class AddGoal extends Fragment {
 
                 if(gTitle.length() != 0 && gDesc.length() != 0) {
                     addGoal(gTitle, cDate, gDesc, gProg);
+                    getFragmentManager().beginTransaction().replace(R.id.fragment_container, new GoalsPage()).commit();
                 } else {
                     Toast.makeText(getContext(), "Please Fill ALL Fields!", Toast.LENGTH_LONG).show();
                 }
