@@ -27,12 +27,14 @@ import java.util.Locale;
 
 /*
 Done: Make rating system, so the emoji buttons provide a rating output
-TODO: Simplify the mood ratings (change from the current extended if statements)
+DONE: Simplify the mood ratings (change from the current extended if statements)
 
-TODO: Add a database for the journals to be saved
-TODO: Have necessary input validation for required user inputs
-TODO: Include a way to delete/cancel a journal entry
-TODO: Save all the user inputs into journal database
+DONE: Add a database for the journals to be saved
+DONE: Have necessary input validation for required user inputs
+DONE: Include a way to delete/cancel a journal entry
+DONE: Save all the user inputs into journal database
+
+TODO: Add a method to view the Journals
 
 Done: Make a list of basic activities for the user to choose from (SQLite Database)
 
