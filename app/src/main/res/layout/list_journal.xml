@@ -46,7 +46,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
+                <!-- TODO: Make image view display the mood icon -->
                 <ImageView
                     android:id="@+id/image_jmood"
                     android:layout_width="80dp"
@@ -55,7 +55,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/list_jdate"
-                    app:srcCompat="@drawable/ic_neutral_selected" />
+                    app:srcCompat="@drawable/ic_neutral_selected"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/list_jmood"
