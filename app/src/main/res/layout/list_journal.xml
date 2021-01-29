@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/journalsLayout">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -51,11 +51,25 @@
                     android:id="@+id/image_jmood"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/list_jdate"
                     app:srcCompat="@drawable/ic_neutral_selected" />
 
+                <TextView
+                    android:id="@+id/list_jmood"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Mood"
+                    android:textColor="@color/colorText"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/image_jmood" />
 
                 <TextView
                     android:id="@+id/list_jwwwell"
@@ -68,7 +82,7 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/image_jmood" />
+                    app:layout_constraintTop_toBottomOf="@id/list_jmood" />
 
                 <TextView
                     android:id="@+id/list_jwwwrong"

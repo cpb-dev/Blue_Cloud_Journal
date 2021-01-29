@@ -80,9 +80,9 @@ public class GoalsPage extends Fragment {
         if(c.getCount() == 0){
             instructions.setVisibility(View.VISIBLE);
             goalsRV.setVisibility(View.GONE);
-            //TODO: Put visibility gone for the Recycler View and display instructions
+            //DONE: Put visibility gone for the Recycler View and display instructions
         } else {
-            //TODO: Put visibility gone for instructions and display Recycler View
+            //DONE: Put visibility gone for instructions and display Recycler View
             instructions.setVisibility(View.GONE);
             goalsRV.setVisibility(View.VISIBLE);
 

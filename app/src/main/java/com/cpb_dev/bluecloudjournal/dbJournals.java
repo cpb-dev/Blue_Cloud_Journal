@@ -58,10 +58,15 @@ public class dbJournals extends SQLiteOpenHelper {
     }
 
     public Cursor getJournals(){
-        /* Method to retrieve all goals from database */
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        return data;
+        /* Method to retrieve all Journals from database */
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = null;
+        if(db != null) {
+            c = db.rawQuery(query, null);
+        }
+        return c;
     }
 
     public void deleteJournal(String id) {
