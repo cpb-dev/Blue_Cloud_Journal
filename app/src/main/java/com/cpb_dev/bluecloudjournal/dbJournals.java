@@ -69,6 +69,16 @@ public class dbJournals extends SQLiteOpenHelper {
         return c;
     }
 
+    public Cursor getLatestJournal(){
+        /* Method to get the last journal inputted */
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        Cursor c = db.rawQuery(query, null);
+        c.moveToLast();
+        return c;
+    }
+
     public void deleteJournal(String id) {
         /* Method to delete selected goal from db */
         SQLiteDatabase db = this.getWritableDatabase();
