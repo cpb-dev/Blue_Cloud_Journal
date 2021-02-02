@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /*
-TODO: Change the title to display the user's name based on who's logged in
 TODO: Add a class and relevant methods to analyse mood ratings based on time
 TODO: Add a way to display a message for when there has been no data added yet
 TODO: Add a function to display all activities with analysis on their most popular rating

@@ -16,6 +16,8 @@
 
     <!-- Home Page -->
     <string name="hp_title">Blue Cloud Journal</string>
+    <string name="hp_mcmood">Most Common Mood:</string>
+    <string name="hp_mrjournal">Most Recent Entry</string>
 
     <!-- Add Journal Page -->
     <string name="aj_title">New Journal</string>
