@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AmendGoal"></activity>
+        <service
+            android:name=".NotifyService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".AmendGoal" />
         <activity android:name=".AddGoal" />
         <activity android:name=".NavActivity">
             <intent-filter>

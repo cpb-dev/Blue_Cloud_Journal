@@ -55,4 +55,8 @@
     <string name="inst_goal">2. Create a goal for yourself</string>
     <string name="inst_end">Hope you enjoy your journal experience!</string>
 
+    <!-- Settings Page-->
+    <string name="sp_notif">Notifications</string>
+    <string name="sp_reminder">Daily Reminder: </string>
+
 </resources>
