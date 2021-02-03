@@ -20,7 +20,7 @@ TODO: Add a function to display all activities with analysis on their most popul
 
 public class Home extends Fragment {
 
-    LinearLayout instructions, journalcard, moodcard;
+    LinearLayout instructions, journalcard;
     dbJournals journalsdb;
     TextView tvDate, tvWWWell, tvWWWrong;
     ImageView imgMood;
@@ -33,7 +33,6 @@ public class Home extends Fragment {
         journalsdb = new dbJournals(getContext());
 
         instructions = (LinearLayout) v.findViewById(R.id.inst_card);
-        moodcard = (LinearLayout) v.findViewById(R.id.hpmood_card);
         journalcard = (LinearLayout) v.findViewById(R.id.hpjournal_card);
         tvDate = (TextView) v.findViewById(R.id.hp_date);
         tvWWWell = (TextView) v.findViewById(R.id.hp_wwwell);
@@ -64,11 +63,9 @@ public class Home extends Fragment {
 
         if(c.getCount() == 0) {
             instructions.setVisibility(View.VISIBLE);
-            moodcard.setVisibility(View.GONE);
             journalcard.setVisibility(View.GONE);
         } else {
             instructions.setVisibility(View.GONE);
-            moodcard.setVisibility(View.VISIBLE);
             journalcard.setVisibility(View.VISIBLE);
 
             tvDate.setText(mr.getString(1));

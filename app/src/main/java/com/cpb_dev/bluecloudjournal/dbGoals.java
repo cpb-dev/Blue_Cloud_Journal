@@ -79,15 +79,16 @@ public class dbGoals extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
-    public void updateGoals(String row_id, String title, String date, String desc, String prog){
+    public boolean updateGoals(String id, String title, String date, String desc, String prog){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
+        cv.put(COL1, id);
         cv.put(COL2, title);
         cv.put(COL3, date);
         cv.put(COL4, desc);
         cv.put(COL5, prog);
-
-        long result = db.update(TABLE_NAME, cv, "id=?", new String[]{row_id});
+        db.update(TABLE_NAME, cv, "ID = ?", new String[] {id});
+        return true;
     }
 
 }

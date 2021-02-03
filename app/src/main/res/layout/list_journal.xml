@@ -40,8 +40,7 @@
                     android:layout_gravity="center"
                     android:text="DATE"
                     android:textColor="@color/colorText"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
+                    android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -64,13 +63,26 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:layout_marginTop="15dp"
-                    android:gravity="center"
                     android:text="Mood"
                     android:textColor="@color/colorText"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/image_jmood" />
+
+                <TextView
+                    android:id="@+id/list_titlewwwell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="What Went Well?"
+                    android:textColor="@color/colorText"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/list_jmood" />
 
                 <TextView
                     android:id="@+id/list_jwwwell"
@@ -83,7 +95,21 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/list_jmood" />
+                    app:layout_constraintTop_toBottomOf="@id/list_titlewwwell" />
+
+                <TextView
+                    android:id="@+id/list_titlewwwrong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="15dp"
+                    android:text="What Went Wrong?"
+                    android:textColor="@color/colorText"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/list_jwwwell" />
 
                 <TextView
                     android:id="@+id/list_jwwwrong"
@@ -96,7 +122,7 @@
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/list_jwwwell" />
+                    app:layout_constraintTop_toBottomOf="@id/list_titlewwwrong" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

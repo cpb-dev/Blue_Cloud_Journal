@@ -107,38 +107,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/hpmood_card"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/background_content"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_add_new_journal"
-        android:visibility="gone">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:text="@string/hp_mcmood"
-            android:textColor="@color/colorText"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            />
-
-        <ImageView
-            android:id="@+id/hp_imgmood"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="10dp"
-            android:layout_gravity="center"
-            android:src="@drawable/rb_neutral_selector"/>
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/hpjournal_card"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -147,7 +115,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hpmood_card"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_new_journal"
         android:visibility="gone">
 
         <TextView
@@ -169,7 +137,7 @@
             android:layout_marginTop="5dp"
             android:text="Date"
             android:textColor="@color/colorText"
-            android:textSize="16sp"
+            android:textSize="12sp"
             />
 
         <ImageView

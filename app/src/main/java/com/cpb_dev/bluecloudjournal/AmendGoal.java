@@ -1,10 +1,15 @@
 package com.cpb_dev.bluecloudjournal;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +18,9 @@ public class AmendGoal extends AppCompatActivity {
     TextView amendTitle, amendDesc, amendProg;
     Button btnSave, btnDelete;
     String id, title, date, desc, prog;
+    SeekBar progBar;
+
+    dbGoals goalsDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +34,25 @@ public class AmendGoal extends AppCompatActivity {
         btnSave = findViewById(R.id.btn_ag_save);
         btnDelete = findViewById(R.id.btn_ag_delete);
 
+        progBar = (SeekBar) findViewById(R.id.amend_progbar);
+
+        progBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                amendProg.setText("" + i + "%");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
         //First we get the data from the recycler view
         getIntentData();
 
@@ -34,7 +61,37 @@ public class AmendGoal extends AppCompatActivity {
             public void onClick(View view) {
                 dbGoals goalsDB = new dbGoals(AmendGoal.this);
                 //Second the update method can be called
-                goalsDB.updateGoals(id, title, date, desc, prog);
+                String ID = getIntent().getStringExtra("id");
+                String ntitle = amendTitle.getText().toString();
+                String ndesc = amendDesc.getText().toString();
+
+                goalsDB.updateGoals(ID, ntitle, date, ndesc, prog);
+                Toast.makeText(AmendGoal.this, "Successfully Updated!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(AmendGoal.this);
+                builder.setCancelable(true);
+                builder.setTitle("Delete Goal");
+                builder.setMessage("Are you sure you want to delete this goal permanently?");
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        deleteGoal();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new GoalsPage()).commit();
+                    }
+                });
+                builder.show(); //Display the alert dialog
             }
         });
     }
@@ -54,6 +111,11 @@ public class AmendGoal extends AppCompatActivity {
         } else{
             Toast.makeText(this, "No Data!!!", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void deleteGoal(){
+        goalsDb.deleteGoal(getIntent().getStringExtra("id"));
+        Toast.makeText(this, "Goal Successfully Deleted!", Toast.LENGTH_LONG).show();
     }
 
 }
