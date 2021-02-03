@@ -64,9 +64,11 @@ public class AmendGoal extends AppCompatActivity {
                 String ID = getIntent().getStringExtra("id");
                 String ntitle = amendTitle.getText().toString();
                 String ndesc = amendDesc.getText().toString();
+                String nprog = amendProg.getText().toString();
 
-                goalsDB.updateGoals(ID, ntitle, date, ndesc, prog);
+                goalsDB.updateGoals(ID, ntitle, date, ndesc, nprog);
                 Toast.makeText(AmendGoal.this, "Successfully Updated!", Toast.LENGTH_LONG).show();
+                onRestart(); //Method to refresh the app to show save that was made
             }
         });
 
@@ -116,6 +118,14 @@ public class AmendGoal extends AppCompatActivity {
     public void deleteGoal(){
         goalsDb.deleteGoal(getIntent().getStringExtra("id"));
         Toast.makeText(this, "Goal Successfully Deleted!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onRestart()
+    {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
     }
 
 }

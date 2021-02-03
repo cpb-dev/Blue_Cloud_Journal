@@ -60,7 +60,7 @@ public class AddGoal extends Fragment {
         goalProg.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                progressTV.setText("" + i + "%");
+                progressTV.setText(i + "%");
             }
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
