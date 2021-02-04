@@ -24,9 +24,8 @@ import java.util.Date;
 import java.util.Locale;
 
 /*
-TODO: Create a database for saving the goals made by the user
-
-TODO: Add functionality for the save and delete button
+DONE: Create a database for saving the goals made by the user
+DONE: Add functionality for the save and delete button
  */
 
 public class AddGoal extends Fragment {

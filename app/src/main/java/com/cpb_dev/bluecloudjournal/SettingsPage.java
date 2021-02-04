@@ -20,11 +20,11 @@ import android.widget.ToggleButton;
 import java.util.Calendar;
 
 import static android.content.Context.ALARM_SERVICE;
+import static android.content.Context.MODE_PRIVATE;
 
 /*
-TODO: Add a toggle button for notifications
-TODO: Add an option for notification frequency
-TODO: Add a method to send the user a notification reminder for creating a new journal entry
+DONE: Add a toggle button for notifications
+DONE: Add a method to send the user a notification reminder for creating a new journal entry
  */
 
 public class SettingsPage extends Fragment {

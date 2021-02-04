@@ -20,9 +20,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 /*
-TODO: Add a default message for when there are no goals(when app is first installed)
-TODO: Add a view for displaying the user's goals, gathered from the goals database
-TODO: Add a method of deleting the goals from the database if requested
+DONE: Add a default message for when there are no goals(when app is first installed)
+DONE: Add a view for displaying the user's goals, gathered from the goals database
+DONE: Add a method of deleting the goals from the database if requested
 
 Done: Use the addNewGoal() function to direct the user to a new fragment
  */

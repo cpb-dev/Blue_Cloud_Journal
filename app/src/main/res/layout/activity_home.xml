@@ -6,11 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_app"
     tools:context=".Home">
-    <!--
-    TODO: Add a card to display a mood chart
-    TODO: Add a card to display a horizontal scroll of activity ratings
-    TODO: Add a card to display the most recent journal entry
-    -->
 
     <TextView
         android:id="@+id/home_title"

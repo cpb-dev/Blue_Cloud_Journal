@@ -34,7 +34,7 @@ DONE: Have necessary input validation for required user inputs
 DONE: Include a way to delete/cancel a journal entry
 DONE: Save all the user inputs into journal database
 
-TODO: Add a method to view the Journals
+DONE: Add a method to view the Journals
 
 Done: Make a list of basic activities for the user to choose from (SQLite Database)
 
