@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
@@ -29,12 +30,21 @@ DONE: Add a method to send the user a notification reminder for creating a new j
 
 public class SettingsPage extends Fragment {
 
+    dbGoals goalsDB;
+    dbJournals journalsDB;
+
     ToggleButton tbDaily;
+    Button wipeAll;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = LayoutInflater.from(getActivity()).inflate(R.layout.activity_settings_page, null);
+
+        goalsDB = new dbGoals(getContext());
+        journalsDB = new dbJournals(getContext());
+
+        wipeAll = v.findViewById(R.id.test_wipe);
 
         tbDaily = (ToggleButton) v.findViewById(R.id.tb_dailyrem);
 
@@ -47,6 +57,13 @@ public class SettingsPage extends Fragment {
                     //No action needs to be made
                     Toast.makeText(getContext(), "No Reminder Set!", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+
+        wipeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                testWipe();
             }
         });
 
@@ -69,6 +86,11 @@ public class SettingsPage extends Fragment {
                 1000 * 60 * 60 * 24, pendingIntent); //Milisecs are how many in a day (as this is daily)
 
         Toast.makeText(getContext(), "Daily Reminder Set!", Toast.LENGTH_LONG).show();
+    }
+
+    public void testWipe(){
+        goalsDB.wipeAll();
+        journalsDB.wipeAll();
     }
 
 }

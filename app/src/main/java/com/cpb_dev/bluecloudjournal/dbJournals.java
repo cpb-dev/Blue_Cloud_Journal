@@ -86,4 +86,11 @@ public class dbJournals extends SQLiteOpenHelper {
                 " = " + id;
         db.execSQL(query);
     }
+
+    public void wipeAll() {
+        /* Temporary method used for testing */
+        SQLiteDatabase db = this.getWritableDatabase();
+        String query = "DELETE FROM " + TABLE_NAME;
+        db.execSQL(query);
+    }
 }

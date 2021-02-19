@@ -59,4 +59,7 @@
     <string name="sp_notif">Notifications</string>
     <string name="sp_reminder">Daily Reminder: </string>
 
+    <!-- Testing -->
+    <string name="wipe">Wipe all data</string>
+
 </resources>
