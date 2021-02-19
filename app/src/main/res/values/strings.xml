@@ -61,5 +61,6 @@
 
     <!-- Testing -->
     <string name="wipe">Wipe all data</string>
+    <string name="add">Add test data</string>
 
 </resources>

@@ -74,8 +74,21 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="15dp"
         android:text="@string/wipe"
+        android:textStyle="bold"
         android:background="@drawable/background_button"
         app:layout_constraintTop_toBottomOf="@+id/amgoaltitle_card" />
+
+    <Button
+        android:id="@+id/test_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"
+        android:text="@string/add"
+        android:textStyle="bold"
+        android:background="@drawable/background_button"
+        app:layout_constraintTop_toBottomOf="@+id/test_wipe" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

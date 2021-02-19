@@ -34,7 +34,7 @@ public class SettingsPage extends Fragment {
     dbJournals journalsDB;
 
     ToggleButton tbDaily;
-    Button wipeAll;
+    Button wipeAll, addNew;
 
     @Nullable
     @Override
@@ -45,6 +45,7 @@ public class SettingsPage extends Fragment {
         journalsDB = new dbJournals(getContext());
 
         wipeAll = v.findViewById(R.id.test_wipe);
+        addNew = v.findViewById(R.id.test_add);
 
         tbDaily = (ToggleButton) v.findViewById(R.id.tb_dailyrem);
 
@@ -60,10 +61,18 @@ public class SettingsPage extends Fragment {
             }
         });
 
+        /* These buttons are only needed for testing purposes */
         wipeAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 testWipe();
+            }
+        });
+
+        addNew.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                testData();
             }
         });
 
@@ -88,9 +97,39 @@ public class SettingsPage extends Fragment {
         Toast.makeText(getContext(), "Daily Reminder Set!", Toast.LENGTH_LONG).show();
     }
 
+    /* The test methods are to be removed before final product */
     public void testWipe(){
         goalsDB.wipeAll();
         journalsDB.wipeAll();
+    }
+
+    public void testData(){
+        goalsDB.addGoal("test 1", "20/01/2021",
+                "Basic description 1", "20%");
+        goalsDB.addGoal("test 2", "21/01/2021",
+                "Basic description 2, this is a bit longer!", "40%");
+        goalsDB.addGoal("test 3", "22/01/2021",
+                "Basic description 3", "55%");
+        goalsDB.addGoal("test 4", "23/01/2021",
+                "Basic description 4", "80%");
+        goalsDB.addGoal("test 5", "24/01/2021",
+                "Basic description 5", "10%");
+
+        journalsDB.addJournal("20/01/2021", "Happy",
+                "What went well for this journal 1!",
+                "What went wrong for this journal 1!");
+        journalsDB.addJournal("21/01/2021", "Sad",
+                "What went well for this journal 2!",
+                "What went wrong for this journal 2!");
+        journalsDB.addJournal("22/01/2021", "Neutral",
+                "What went well for this journal 3!",
+                "What went wrong for this journal 3!");
+        journalsDB.addJournal("23/01/2021", "Cry",
+                "What went well for this journal 4!",
+                "What went wrong for this journal 4!");
+        journalsDB.addJournal("24/01/2021", "Beam",
+                "What went well for this journal 5!",
+                "What went wrong for this journal 5!");
     }
 
 }
